@@ -37,8 +37,8 @@ function faviconUrl(url: string) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-zinc-950 px-6 py-16">
-      <main className="mx-auto max-w-3xl space-y-12">
+    <div className="px-6 py-12">
+      <div className="mx-auto max-w-3xl space-y-12">
         {links.map((section) => (
           <section key={section.category}>
             <h2 className="mb-4 text-[11px] font-semibold uppercase tracking-widest text-zinc-500">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </section>
         ))}
-      </main>
+      </div>
     </div>
   );
 }

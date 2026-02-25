@@ -25,9 +25,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col bg-zinc-950 antialiased`}
       >
-        {children}
+        <header className="border-b border-zinc-800 px-6 py-4">
+          <div className="mx-auto flex max-w-3xl items-center justify-between">
+            <span className="text-sm font-semibold tracking-tight text-zinc-100">
+              Linklist
+            </span>
+          </div>
+        </header>
+
+        <main className="flex-1">{children}</main>
+
+        <footer className="border-t border-zinc-800 px-6 py-5">
+          <div className="mx-auto max-w-3xl text-center text-xs text-zinc-600">
+            © {new Date().getFullYear()} Stefan
+          </div>
+        </footer>
       </body>
     </html>
   );
